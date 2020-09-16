@@ -1,0 +1,114 @@
+.form-container {
+  display: flex;
+  width: 80%;
+  max-width: 800px;
+  padding: 24px;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.title {
+  color: #3b5266;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  color: #3b5266;
+  font-weight: bold;
+  font-size: 12px;
+  margin: 5px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 18px;
+}
+
+.input {
+  border: none;
+  border-bottom: 1px solid #a3aeb7;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 12px;
+  color: #3b5266;
+}
+
+.options {
+  flex: 1;
+  background-color: #f7f9fa;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 12px;
+  color: #3b5266;
+  margin: 10px 0;
+}
+
+.button {
+  color: white;
+  background-color: #3b5266;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.days {
+  background-color: #f7f9fa;
+  border-radius: 5px;
+  width: 35px;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 12px;
+  color: #3b5266;
+  margin: 10px 5px;
+}
+
+.days-active {
+  background-color: #049df4;
+  color: white;
+}
+
+.hint {
+  color: #a3aeb7;
+  font-size: 10px;
+  align-self: center;
+}
+
+.label {
+  color: #a3aeb7;
+  font-size: 12px;
+  align-self: center;
+}
+
+.preview {
+  border: none;
+  color: #a3aeb7;
+  font-size: 12px;
+  flex: 1;
+  background-color: #f7f9fa;
+  margin: 20px;
+  border-radius: 5px;
+}
