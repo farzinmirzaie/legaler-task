@@ -16,6 +16,9 @@ const ScheduleForm = ({ onSubmit = () => null }) => {
   const [repeatCount, setRepeatCount] = useState(1);
   const [repeatType, setRepeatType] = useState("Week");
   const [repeatDays, setRepeatDays] = useState([]);
+  const [endType, setEndType] = useState("by");
+  const [date, setDate] = useState(new Date());
+  const [recurrenceCount, setRecurrenceCount] = useState(1);
 
   const submitForm = () => {
     const data = {
@@ -26,7 +29,7 @@ const ScheduleForm = ({ onSubmit = () => null }) => {
       isPrivate,
       repeatable,
       ...(repeatable && { repeatCount, repeatType, repeatDays }),
-      endDate: new Date(),
+      ...(endType === "by" ? { date } : { recurrenceCount }),
     };
     validate(data) && onSubmit(data);
   };
@@ -92,7 +95,16 @@ const ScheduleForm = ({ onSubmit = () => null }) => {
           <Result />
         </div>
       </div>
-      <Footer />
+      <Footer
+        {...{
+          endType,
+          setEndType,
+          date,
+          setDate,
+          recurrenceCount,
+          setRecurrenceCount,
+        }}
+      />
     </div>
   );
 };
