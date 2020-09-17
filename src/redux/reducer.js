@@ -1,16 +1,7 @@
 import { SUBMIT_FORM } from "./constants";
 
 const initialState = {
-  subject: "",
-  project: "",
-  attendees: [],
-  type: "",
-  isPrivate: true,
-  repeatable: false,
-  repeatCount: 1,
-  repeatType: "Week",
-  repeatDays: [],
-  endDate: new Date(),
+  result: null,
 };
 
 const reducer = (state = initialState, action) => {
@@ -18,10 +9,7 @@ const reducer = (state = initialState, action) => {
 
   switch (type) {
     case SUBMIT_FORM:
-      return {
-        ...state,
-        payload,
-      };
+      return { ...state, result: payload };
     default:
       return state;
   }
